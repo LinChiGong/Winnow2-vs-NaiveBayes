@@ -1,0 +1,81 @@
+Dataset: iris.data
+Class information:
+Class 1 = Iris Setosa
+Class 2 = Iris Versicolour
+Class 3 = Iris Virginica
+
+----------------------------------------
+Parameters of the trained Naive Bayes model
+----------------------------------------
+m = 1.0
+p = 0.001
+
+Prior and list of likelihoods for class 1(rounded to five decimal places):
+0.32
+[ 0.36367 0.60609 3.0E-5 3.0E-5 0.06064 0.87882 0.03033 0.96973 3.0E-5 3.0E-5 3.0E-5 3.0E-5 3.0E-5 0.96973 3.0E-5 3.0E-5 ]
+
+Prior and list of likelihoods for class 2(rounded to five decimal places):
+0.35
+[ 0.02781 0.41669 0.50003 0.02781 0.58336 0.38892 3.0E-5 3.0E-5 3.0E-5 0.13892 0.77781 0.05558 3.0E-5 3.0E-5 0.97225 3.0E-5 ]
+
+Prior and list of likelihoods for class 3(rounded to five decimal places):
+0.33
+[ 0.02944 0.14709 0.55885 0.23532 0.41179 0.55885 3.0E-5 3.0E-5 3.0E-5 3.0E-5 0.05885 0.73532 0.1765 3.0E-5 0.50003 0.47062 ]
+
+----------------------
+Classification Results
+----------------------
+Prediction accuracy: 94.0%
+
+	Actual Class	Predicted Class
+	------------	---------------
+	     2      	     2
+	     3      	     3
+	     1      	     1
+	     2      	     2
+	     2      	     2
+	     1      	     1
+	     1      	     1
+	     2      	     2
+	     1      	     1
+	     2      	     2
+	     2      	     2
+	     1      	     1
+	     1      	     1
+	     2      	     2
+	     1      	     1
+	     1      	     1
+	     2      	     2
+	     1      	     1
+	     2      	     2
+	     2      	     2
+	     1      	     1
+	     3      	     3
+	     2      	     2
+	     3      	     3
+	     1      	     1
+	     3      	     3
+	     2      	     2
+	     2      	     2
+	     1      	     1
+	     3      	     3
+	     3      	     3
+	     3      	     3
+	     1      	     1
+	     3      	     3
+	     3      	     3
+	     3      	     2
+	     3      	     3
+	     3      	     3
+	     1      	     1
+	     1      	     1
+	     3      	     3
+	     3      	     2
+	     1      	     1
+	     1      	     1
+	     2      	     2
+	     3      	     3
+	     3      	     3
+	     2      	     2
+	     3      	     2
+	     1      	     1

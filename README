@@ -1,0 +1,7 @@
+- Author: Winston Lin
+
+- How to run this program: Run “src/P1/Main.java” to view the demonstration with a 		specified dataset. Run “src/P1/	WriteToFile.java” to perform classification on all 	5 datasets and output each model and its prediction results
+
+- Java version: 10.0.1
+
+- IDE used: Eclipse Oxygen.3a Release (4.7.3a)

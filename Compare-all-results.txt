@@ -1,0 +1,6 @@
+		Winnow-2-iter1	Winnow-2-iter50	Naive-Bayes
+Soybean		93.33%		100.0%		100.0%
+Vote		97.93%		97.93%		94.48%
+Breast-Cancer	93.99%		95.28%		97.85%
+Iris		94.0%		92.0%		94.0%
+Glass		43.66%		46.48%		53.52%
