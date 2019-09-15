@@ -68,8 +68,8 @@ For multi-class classification problems, even though Winnow-2 performs unexpecte
 
 ## References
 
-1.	Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
-2.	Littlestone, N. (1988). Learning quickly when irrelevant attributes abound: A new linear-threshold algorithm. Machine Learning,2(4), 285-318. doi:10.1007/bf00116827 
-3.	Zhang, T. (2001). Regularized winnow methods. Advances in Neural Information Processing Systems, 13, 703–709. 
-4.	Jiang, L., Wang, D., & Cai, Z. (2007). Scaling Up the Accuracy of Bayesian Network Classifiers by M-Estimate. Advanced Intelligent Computing Theories and Applications. With Aspects of Artificial Intelligence Lecture Notes in Computer Science, 475-484. doi:10.1007/978-3-540-74205-0_52
+1. Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
+2. Littlestone, N. (1988). Learning quickly when irrelevant attributes abound: A new linear-threshold algorithm. Machine Learning,2(4), 285-318. doi:10.1007/bf00116827 
+3. Zhang, T. (2001). Regularized winnow methods. Advances in Neural Information Processing Systems, 13, 703–709. 
+4. Jiang, L., Wang, D., & Cai, Z. (2007). Scaling Up the Accuracy of Bayesian Network Classifiers by M-Estimate. Advanced Intelligent Computing Theories and Applications. With Aspects of Artificial Intelligence Lecture Notes in Computer Science, 475-484. doi:10.1007/978-3-540-74205-0_52
 
