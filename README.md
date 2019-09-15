@@ -23,7 +23,8 @@ Missing values are filled with class vote or class median. If the attribute is B
 
 > Note that I implement an “iteration” argument for the training function [3]. The regular Winnow-2 classifier only has one iteration: it adjusts its weights as it goes through all the entries in the training set once. A second iteration allows the model to go through the training set again. In this project, I want to compare the results of regular Winnow-2 models and Winnow-2 models with 50 iterations.
 
-- Naïve Bayes classifier: During the training process, the model simply counts occurrences and stores the prior of each class and the likelihood of each attribute given class. During the testing process, a posterior is calculated and recorded for each class. The class with the largest posterior value is the predicted class. m-estimate smoothing is implemented where m (pseudo-sample size) = 1 and p (weight) = 0.001 [4].
+- Naïve Bayes classifier: 
+  During the training process, the model simply counts occurrences and stores the prior of each class and the likelihood of each attribute given class. During the testing process, a posterior is calculated and recorded for each class. The class with the largest posterior value is the predicted class. m-estimate smoothing is implemented where m (pseudo-sample size) = 1 and p (weight) = 0.001 [4].
 
 - Summary statistics: Classification accuracy (number of correct predictions / total number of test samples) of each model on each dataset is calculated.
 
