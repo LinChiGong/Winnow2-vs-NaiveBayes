@@ -38,15 +38,15 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
 
 - Sample outputs:
 
+  ![alt text](outputs/winnow-2.png) ![alt text](outputs/naive-bayes.png)
 
+  Output of the Winnow-2 model on “Vote” dataset is on the left. Output of the Naïve Bayes model on “Vote” dataset is on the right. Class descriptions are shown in the first section. Parameters including weights, priors, and likelihoods are shown in the next section. Side-by-side classification results and classification accuracies are shown in the last section.
 
-Output of the Winnow-2 model on “Vote” dataset is on the left. Output of the Naïve Bayes model on “Vote” dataset is on the right. Class descriptions are shown in the first section. Parameters including weights, priors, and likelihoods are shown in the next section. Side-by-side classification results and classification accuracies are shown in the last section.
+- Summary statistics
 
-•	Summary statistics
+  ![alt text](outputs/summary.png)
 
-
-
-Record all classification accuracies. First column is the regular Winnow-2 algorithm. Second column is the Winnow-2 algorithm with 50 iterations. Third column is the Naïve Bayes algorithm. Rows are the 5 datasets. 
+  Record all classification accuracies. First column is the regular Winnow-2 algorithm. Second column is the Winnow-2 algorithm with 50 iterations. Third column is the Naïve Bayes algorithm. Rows are the 5 datasets. 
 
 ## Discussion
 
