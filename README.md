@@ -14,7 +14,8 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
 
 ## Methods
 
-- Data processing
+- Data processing:
+
   For categorical attributes, each category is assigned as a separate attribute. For continuous attributes, I first create groups for each attribute. For example, if a continuous attribute has [max, min] = [2, 5], I would make 3 groups as follows: [2-3, 3-4, 4-5]. Then, each group is assigned as a separate attribute.
 
   Missing values are filled with class vote or class median. If the attribute is Boolean or nominal categorical, the missing value is filled with the majority vote value of the data points that belong to the same class. If the attribute is ordinal categorical or continuous, the missing value is filled with the median value of the data points that belong to the same class.
@@ -26,45 +27,23 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
   Note that I implement an “iteration” argument for the training function [3]. The regular Winnow-2 classifier only has one iteration: it adjusts its weights as it goes through all the entries in the training set once. A second iteration allows the model to go through the training set again. In this project, I want to compare the results of regular Winnow-2 models and Winnow-2 models with 50 iterations.
 
 - Naïve Bayes classifier:
+
   During the training process, the model simply counts occurrences and stores the prior of each class and the likelihood of each attribute given class. During the testing process, a posterior is calculated and recorded for each class. The class with the largest posterior value is the predicted class. m-estimate smoothing is implemented where m (pseudo-sample size) = 1 and p (weight) = 0.001 [4].
 
 - Summary statistics:
+
   Classification accuracy (number of correct predictions / total number of test samples) of each model on each dataset is calculated.
 
-Results
+## Results
 
-•	Sample outputs:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Sample outputs:
 
 
 
 Output of the Winnow-2 model on “Vote” dataset is on the left. Output of the Naïve Bayes model on “Vote” dataset is on the right. Class descriptions are shown in the first section. Parameters including weights, priors, and likelihoods are shown in the next section. Side-by-side classification results and classification accuracies are shown in the last section.
 
 •	Summary statistics
+
 
 
 Record all classification accuracies. First column is the regular Winnow-2 algorithm. Second column is the Winnow-2 algorithm with 50 iterations. Third column is the Naïve Bayes algorithm. Rows are the 5 datasets. 
@@ -88,6 +67,7 @@ In this project, we compare and contrast how regular Winnow-2, Winnow-2 with rep
 For multi-class classification problems, even though Winnow-2 performs unexpectedly well, Naïve Bayes still has better performance. For problems that are based on datasets with relatively dependent attributes, Winnow-2 may be the better choice. For problems that are not linearly separable, both Winnow-2 and Naïve Bayes are not ideal, and we should look for alternative algorithms.
 
 ## References
+
 1.	Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
 2.	Littlestone, N. (1988). Learning quickly when irrelevant attributes abound: A new linear-threshold algorithm. Machine Learning,2(4), 285-318. doi:10.1007/bf00116827 
 3.	Zhang, T. (2001). Regularized winnow methods. Advances in Neural Information Processing Systems, 13, 703–709. 
