@@ -38,7 +38,7 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
 
 - Sample outputs:
 
-  ![alt text](outputs/winnow-2.png)                                 ![alt text](outputs/naive-bayes.png)
+  ![alt text](outputs/winnow-2.png, width="100")  ![alt text](outputs/naive-bayes.png, width="100")
 
   Output of the Winnow-2 model on “Vote” dataset is on the left. Output of the Naïve Bayes model on “Vote” dataset is on the right. Class descriptions are shown in the first section. Parameters including weights, priors, and likelihoods are shown in the next section. Side-by-side classification results and classification accuracies are shown in the last section.
 
@@ -47,24 +47,6 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
   ![alt text](outputs/summary.png)
 
   Record all classification accuracies. First column is the regular Winnow-2 algorithm. Second column is the Winnow-2 algorithm with 50 iterations. Third column is the Naïve Bayes algorithm. Rows are the 5 datasets. 
-
-## Discussion
-
-As shown above, both Winnow-2 and Naïve Bayes perform quite well on all datasets except for the “Glass” dataset (Surprisingly, Winnow-2 handles other multi-class classification problems quite well!). I think there are 3 possible reasons which may explain the underperformance on “Glass”. First of all, the dataset may not be very representative. Note that there are 6 classes, 214 entries, and 9 attributes in the “Glass” dataset. This means that after split to training and test sets, on average, there are only 23 training samples for each class. Considering the number of attributes, the training samples may be too few to represent the whole class. Obtaining more data may help create better training sets. 
-
-Second, all attributes in “Glass” are continuous. Recall that since Winnow-2 is designed for Boolean attributes, I have to categorize continuous attributes and then dummify them into Boolean attributes. A lot of information may be lost during this transformation process, and therefore affecting the performance of the algorithms. If we implement a Gaussian Naïve Bayes model which is able to use the original “Glass” dataset instead of the transformed dataset, we may achieve better results.
-
-Third, “Glass” classification problem may not be linearly separable in the first place. It is worth noting that both Winnow-2 and Naïve Bayes are only capable of learning linearly separable problems. If “Glass” is just not linearly separable, then we should implement other algorithms that are more suitable to this task.
-
-Notice that Winnow-2 with 50 iterations (2nd column) generally performs better than regular Winnow-2 (1st column). I think this is due to the fact that all the datasets we have in this project have only hundreds of entries. Multiple iterations during training gives the models more time to adjust their weights. However, this may not always be beneficial. Notice that for the “Iris” dataset, the repeated training makes things worse. I believe this is a sign of overfitting. When the model is already robust enough yet we keep feeding the same set of training samples to it, eventually, we are only catching the noise. It is important to select the “right” number of iterations per problem.
-
-Also notice that Naïve Bayes generally performs better than both Winnow-2 algorithms. This is not surprising since Naïve Bayes is commonly considered more robust than Winnow-2. However, for the “Vote” dataset, Naïve Bayes does lose to Winnow-2. Since Naïve Bayes works well under the strong assumption that all attributes are conditionally independent, I would guess that one possible reason the Naïve Bayes model underperforms in this case may be that attributes in “Vote” are relatively dependent. If that is the case, implementing a Tree Augmented Naïve Bayes would generate better results.
-
-## Summary
-
-In this project, we compare and contrast how regular Winnow-2, Winnow-2 with repeated training, and Naïve Bayes algorithms performs on 5 classification problems. Although Naïve Bayes performs better than regular Winnow-2 in 4 out of 5 problems, there is case where Winnow-2 does beat Naïve Bayes in terms of classification accuracy. Moreover, the performance of Winnow-2 can be enhanced by allowing the model to go through the training set repeatedly during the training process. One thing to keep in mind is that the repeated training may cause overfitting, and therefore we have to be very careful when choosing the number of iterations.
-
-For multi-class classification problems, even though Winnow-2 performs unexpectedly well, Naïve Bayes still has better performance. For problems that are based on datasets with relatively dependent attributes, Winnow-2 may be the better choice. For problems that are not linearly separable, both Winnow-2 and Naïve Bayes are not ideal, and we should look for alternative algorithms.
 
 ## References
 
