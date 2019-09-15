@@ -14,9 +14,10 @@ On the other hand, Naïve Bayes is a supervised learning algorithm that is power
 
 ## Methods
 
-- Data processing: For categorical attributes, each category is assigned as a separate attribute. For continuous attributes, I first create groups for each attribute. For example, if a continuous attribute has [max, min] = [2, 5], I would make 3 groups as follows: [2-3, 3-4, 4-5]. Then, each group is assigned as a separate attribute.
+- Data processing: 
+  For categorical attributes, each category is assigned as a separate attribute. For continuous attributes, I first create groups for each attribute. For example, if a continuous attribute has [max, min] = [2, 5], I would make 3 groups as follows: [2-3, 3-4, 4-5]. Then, each group is assigned as a separate attribute.
 
-Missing values are filled with class vote or class median. If the attribute is Boolean or nominal categorical, the missing value is filled with the majority vote value of the data points that belong to the same class. If the attribute is ordinal categorical or continuous, the missing value is filled with the median value of the data points that belong to the same class.
+  Missing values are filled with class vote or class median. If the attribute is Boolean or nominal categorical, the missing value is filled with the majority vote value of the data points that belong to the same class. If the attribute is ordinal categorical or continuous, the missing value is filled with the median value of the data points that belong to the same class.
 
 - Winnow-2 classifier: 
 > The default for alpha (promotion/demotion rate) is 2. Theta (threshold) is set to equal to half of the number of attributes [2]. For a 2-class classification problem, only one classifier is trained. Predictions are based on whether the dot product of weights and each test sample exceeds the threshold or not. For a multi-class classification problem, one classifier is trained for each class. When training on one class, data points of that class are seen as positive samples while data points of all other classes are regarded negatives. As a result, each class has its own weights. When making predictions on the test samples, a dot product is calculated for each class. The class with the largest dot product is the predicted class.
